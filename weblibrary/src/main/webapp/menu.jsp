@@ -22,7 +22,7 @@
 							value="/member/loginMember.jsp"/>">Log-in
 							<span class="sr-only">(current)</span></a></li>
 						<li class="nav-item"><a class="nav-link" href="<c:url
-						value="#"/>">회원 가입</a></li>
+						value="/member/addMember.jsp"/>">회원 가입</a></li>
 					</c:when>
 					<c:otherwise>
 						<li style="padding-top: 7px; color: white">
@@ -48,6 +48,9 @@
 		      	</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="<c:url value="/addBook.jsp"/>">도서 등록</a>
+		      	</li>
+		      	<li class="nav-item">
+		        	<a class="nav-link" href="<c:url value="/editBook.jsp"/>">도서 수정</a>
 		      	</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="#">도서 삭제</a>

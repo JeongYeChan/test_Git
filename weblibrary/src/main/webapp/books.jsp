@@ -21,9 +21,9 @@
 					rs = pstmt.executeQuery();
 					while (rs.next()) {
 				%>
-				<div class="col-md-4">
+				<div class="col-md-2">
 					<img src="./upload/<%=rs.getString("b_fileName") %>"
-					"style="width": 100%">
+					" style="width: 100%" align="center">
 					<h3><%=rs.getString("b_name") %></h3>
 					<p>
 						<a href="./book.jsp?id=<%=rs.getString("b_id")%>"

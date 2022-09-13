@@ -15,11 +15,12 @@
 	<%!String greeting = "Welcome";%>
 	<div class="jumbotron">
 		<div class="container">
-			<h4 class="display-1" align="center"> 
+			<h4 class="display-1" align="center">
 				<%=greeting%>
 			</h4>
 		</div>
 	</div>
+	
 	<div class="container">
 		<div class="text-center">
 			<%
