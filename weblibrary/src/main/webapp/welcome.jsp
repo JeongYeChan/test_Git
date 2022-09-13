@@ -15,16 +15,15 @@
 	<%!String greeting = "Welcome";%>
 	<div class="jumbotron">
 		<div class="container">
-			<h4 class="display-1"> 
-			<a img background: url("/upload/library.jpg") center no-repeat;>
+			<h4 class="display-1" align="center"> 
 				<%=greeting%>
-			</a></h4>
+			</h4>
 		</div>
 	</div>
 	<div class="container">
 		<div class="text-center">
 			<%
-				response.setIntHeader("Refresh", 3);
+				response.setIntHeader("Refresh", 60);
 				Date day = new java.util.Date();
 				String am_pm;
 				int hour = day.getHours();

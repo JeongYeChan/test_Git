@@ -5,7 +5,7 @@
 	String sessionId = (String) session.getAttribute("sessionId");
 %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  		<a class="navbar-brand" href="welcome.jsp">Home</a>
+  		<a class="navbar-brand" href="<c:url value="/welcome.jsp"/>">Home</a>
  		<button class="navbar-toggler" type="button" 
  				data-toggle="collapse" data-target="#navbarColor01" 
  				aria-controls="navbarColor01" aria-expanded="false" 
@@ -19,7 +19,7 @@
 					<c:when test="${empty sessionId}">
 						<li class="nav-item active">
 							<a class="nav-link" href="<c:url
-							value="#"/>">Log-in
+							value="/member/loginMember.jsp"/>">Log-in
 							<span class="sr-only">(current)</span></a></li>
 						<li class="nav-item"><a class="nav-link" href="<c:url
 						value="#"/>">회원 가입</a></li>
@@ -29,10 +29,10 @@
 						[<%=sessionId%>님]</li>
 						<li class="nav-item active">
 							<a class="nav-link" href="<c:url
-							value="#"/>">Log-out
+							value="/member/logoutMember.jsp"/>">Log-out
 							<span class="sr-only">(current)</span></a></li>
 						<li class="nav-item"><a class="nav-link" href="<c:url
-						value="#"/>">회원 수정</a></li>
+						value="/member/updateMember.jsp"/>">회원 수정</a></li>
 						
 					</c:otherwise>
 				</c:choose>
@@ -41,16 +41,13 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 	  		<ul class="navbar-nav mr-auto">
 		      	<li class="nav-item">
-		        	<a class="nav-link" href="#">도서 검색</a>
-		      	</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="#">도서 목록</a>
+		        	<a class="nav-link" href="<c:url value="/books.jsp"/>">도서 목록</a>
 		      	</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="#">도서 대여</a>
 		      	</li>
 		      	<li class="nav-item">
-		        	<a class="nav-link" href="#">도서 추가</a>
+		        	<a class="nav-link" href="<c:url value="/addBook.jsp"/>">도서 등록</a>
 		      	</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="#">도서 삭제</a>
